@@ -1,6 +1,6 @@
-# dxlib-ffi使い方
-
-## 手順
+# DxLibをRust用で扱うための愚直なラッパー
+## dxlib-ffi使い方
+### 手順
 1. DxLibの公式サイトからC#用をダウンロードし、解凍後、DxLib_x64.dllかDxLib.dll等をプロジェクトルートに配置
 2. dxlib-ffiを追加 
 ```plaintext
@@ -32,6 +32,9 @@ fn main() {
 ```
 4. もしdxlib_ffi::dxlib内で定義されているdxlib関数が足りない場合は、下記の様に自身で定義
 ```rust
+use dxlib_ffi::dxlib_constants::*;
+use dxlib_ffi::dxlib_types::*;
+use dxlib_ffi::dxlib_gen;
 // =======================================================
 // dxlib_gen! {
 //  [libname],
@@ -80,3 +83,4 @@ dxlib_gen! {
     fn DrawString(x: CInt, y: CInt, string: &str, Color: Color) -> CInt,
 }
 ```
+5. cargo run等して実行
