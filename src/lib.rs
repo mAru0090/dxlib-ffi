@@ -1,6 +1,6 @@
-mod dxlib;
-mod dxlib_constants;
-mod dxlib_types;
+pub mod dxlib;
+pub mod dxlib_constants;
+pub mod dxlib_types;
 
 pub use dxlib_ffi_macro::dxlib_gen;
 
