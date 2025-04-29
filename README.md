@@ -78,9 +78,9 @@ dxlib_gen! {
         char_code_format: CInt,
     ) -> CInt,
     // 色コードを取得する
-    fn GetColor(Red: CInt, Green: CInt, Blue: CInt) -> Color,
+    fn GetColor(Red: CInt, Green: CInt, Blue: CInt) -> CInt,
     // 文字列を描画する
-    fn DrawString(x: CInt, y: CInt, string: &str, Color: Color) -> CInt,
+    fn DrawString(x: CInt, y: CInt, string: &str, color: CInt) -> CInt,
 }
 ```
 5. cargo run等して実行

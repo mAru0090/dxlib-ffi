@@ -46,5 +46,5 @@ dxlib_gen! {
     // 色コードを取得する
     fn GetColor(Red: CInt, Green: CInt, Blue: CInt) -> CInt,
     // 文字列を描画する
-    fn DrawString(x: CInt, y: CInt, string: &str, Color: CInt) -> CInt,
+    fn DrawString(x: CInt, y: CInt, string: &str, color: CInt) -> CInt,
 }
